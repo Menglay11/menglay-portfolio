@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-04T18:43:14.5390150+07:00",
+  "title": "Design System: Kaing Menglay Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "canvas": { "role": "neutral", "displayName": "Bone Gallery", "canonical": "#e9e7df", "tonalRamp": ["oklch(15% 0.012 92)", "oklch(27% 0.012 92)", "oklch(39% 0.012 92)", "oklch(51% 0.012 92)", "oklch(63% 0.012 92)", "oklch(75% 0.012 92)", "#e9e7df", "oklch(95% 0.012 92)"] },
+      "canvas-soft": { "role": "neutral", "displayName": "Soft Bone", "canonical": "#f3f1ea", "tonalRamp": ["oklch(15% 0.010 92)", "oklch(27% 0.010 92)", "oklch(39% 0.010 92)", "oklch(51% 0.010 92)", "oklch(63% 0.010 92)", "oklch(75% 0.010 92)", "oklch(87% 0.010 92)", "#f3f1ea"] },
+      "ink": { "role": "neutral", "displayName": "Atelier Ink", "canonical": "#0d0e0e", "tonalRamp": ["#0d0e0e", "oklch(27% 0.003 200)", "oklch(39% 0.003 200)", "oklch(51% 0.003 200)", "oklch(63% 0.003 200)", "oklch(75% 0.003 200)", "oklch(87% 0.003 200)", "oklch(95% 0.003 200)"] },
+      "ink-soft": { "role": "neutral", "displayName": "Graphite Note", "canonical": "#51534f", "tonalRamp": ["oklch(15% 0.008 125)", "oklch(27% 0.008 125)", "#51534f", "oklch(51% 0.008 125)", "oklch(63% 0.008 125)", "oklch(75% 0.008 125)", "oklch(87% 0.008 125)", "oklch(95% 0.008 125)"] },
+      "line": { "role": "neutral", "displayName": "Coordinate Hairline", "canonical": "rgba(13, 14, 14, 0.18)", "tonalRamp": ["oklch(15% 0.003 200)", "oklch(27% 0.003 200)", "oklch(39% 0.003 200)", "oklch(51% 0.003 200)", "oklch(63% 0.003 200)", "oklch(75% 0.003 200)", "oklch(87% 0.003 200)", "oklch(95% 0.003 200)"] },
+      "line-strong": { "role": "neutral", "displayName": "Strong Coordinate Hairline", "canonical": "rgba(13, 14, 14, 0.42)", "tonalRamp": ["oklch(15% 0.003 200)", "oklch(27% 0.003 200)", "oklch(39% 0.003 200)", "oklch(51% 0.003 200)", "oklch(63% 0.003 200)", "oklch(75% 0.003 200)", "oklch(87% 0.003 200)", "oklch(95% 0.003 200)"] },
+      "stage": { "role": "neutral", "displayName": "Model Void", "canonical": "#0c0d0d", "tonalRamp": ["#0c0d0d", "oklch(27% 0.003 200)", "oklch(39% 0.003 200)", "oklch(51% 0.003 200)", "oklch(63% 0.003 200)", "oklch(75% 0.003 200)", "oklch(87% 0.003 200)", "oklch(95% 0.003 200)"] },
+      "stage-raised": { "role": "neutral", "displayName": "Raised Model Void", "canonical": "#151616", "tonalRamp": ["#151616", "oklch(27% 0.003 200)", "oklch(39% 0.003 200)", "oklch(51% 0.003 200)", "oklch(63% 0.003 200)", "oklch(75% 0.003 200)", "oklch(87% 0.003 200)", "oklch(95% 0.003 200)"] },
+      "stage-line": { "role": "neutral", "displayName": "Chamber Hairline", "canonical": "rgba(255, 255, 255, 0.16)", "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(75% 0 0)", "oklch(87% 0 0)", "oklch(95% 0 0)"] },
+      "stage-ink": { "role": "neutral", "displayName": "Chamber White", "canonical": "#f4f3ed", "tonalRamp": ["oklch(15% 0.009 92)", "oklch(27% 0.009 92)", "oklch(39% 0.009 92)", "oklch(51% 0.009 92)", "oklch(63% 0.009 92)", "oklch(75% 0.009 92)", "oklch(87% 0.009 92)", "#f4f3ed"] },
+      "stage-soft": { "role": "neutral", "displayName": "Chamber Gray", "canonical": "#a7aaa3", "tonalRamp": ["oklch(15% 0.010 125)", "oklch(27% 0.010 125)", "oklch(39% 0.010 125)", "oklch(51% 0.010 125)", "#a7aaa3", "oklch(75% 0.010 125)", "oklch(87% 0.010 125)", "oklch(95% 0.010 125)"] },
+      "signal": { "role": "primary", "displayName": "Live Acid", "canonical": "#d8ff3e", "tonalRamp": ["oklch(15% 0.19 119)", "oklch(27% 0.19 119)", "oklch(39% 0.19 119)", "oklch(51% 0.19 119)", "oklch(63% 0.19 119)", "oklch(75% 0.19 119)", "#d8ff3e", "oklch(95% 0.19 119)"] },
+      "signal-ink": { "role": "neutral", "displayName": "Signal Ink", "canonical": "#111307", "tonalRamp": ["#111307", "oklch(27% 0.025 119)", "oklch(39% 0.025 119)", "oklch(51% 0.025 119)", "oklch(63% 0.025 119)", "oklch(75% 0.025 119)", "oklch(87% 0.025 119)", "oklch(95% 0.025 119)"] },
+      "danger": { "role": "danger", "displayName": "Alert Coral", "canonical": "#ff8d82", "tonalRamp": ["oklch(15% 0.14 27)", "oklch(27% 0.14 27)", "oklch(39% 0.14 27)", "oklch(51% 0.14 27)", "oklch(63% 0.14 27)", "#ff8d82", "oklch(87% 0.14 27)", "oklch(95% 0.14 27)"] },
+      "dark-canvas": { "role": "neutral", "displayName": "Night Gallery", "canonical": "#0b0c0c", "tonalRamp": ["#0b0c0c", "oklch(27% 0.003 200)", "oklch(39% 0.003 200)", "oklch(51% 0.003 200)", "oklch(63% 0.003 200)", "oklch(75% 0.003 200)", "oklch(87% 0.003 200)", "oklch(95% 0.003 200)"] },
+      "dark-canvas-soft": { "role": "neutral", "displayName": "Soft Night Gallery", "canonical": "#121313", "tonalRamp": ["#121313", "oklch(27% 0.003 200)", "oklch(39% 0.003 200)", "oklch(51% 0.003 200)", "oklch(63% 0.003 200)", "oklch(75% 0.003 200)", "oklch(87% 0.003 200)", "oklch(95% 0.003 200)"] },
+      "dark-ink": { "role": "neutral", "displayName": "Night Gallery White", "canonical": "#f2f0e8", "tonalRamp": ["oklch(15% 0.011 92)", "oklch(27% 0.011 92)", "oklch(39% 0.011 92)", "oklch(51% 0.011 92)", "oklch(63% 0.011 92)", "oklch(75% 0.011 92)", "oklch(87% 0.011 92)", "#f2f0e8"] },
+      "dark-ink-soft": { "role": "neutral", "displayName": "Night Gallery Gray", "canonical": "#aaaca5", "tonalRamp": ["oklch(15% 0.009 125)", "oklch(27% 0.009 125)", "oklch(39% 0.009 125)", "oklch(51% 0.009 125)", "#aaaca5", "oklch(75% 0.009 125)", "oklch(87% 0.009 125)", "oklch(95% 0.009 125)"] },
+      "dark-line": { "role": "neutral", "displayName": "Night Coordinate Hairline", "canonical": "rgba(244, 243, 237, 0.16)", "tonalRamp": ["oklch(15% 0.009 92)", "oklch(27% 0.009 92)", "oklch(39% 0.009 92)", "oklch(51% 0.009 92)", "oklch(63% 0.009 92)", "oklch(75% 0.009 92)", "oklch(87% 0.009 92)", "oklch(95% 0.009 92)"] },
+      "dark-line-strong": { "role": "neutral", "displayName": "Strong Night Coordinate Hairline", "canonical": "rgba(244, 243, 237, 0.38)", "tonalRamp": ["oklch(15% 0.009 92)", "oklch(27% 0.009 92)", "oklch(39% 0.009 92)", "oklch(51% 0.009 92)", "oklch(63% 0.009 92)", "oklch(75% 0.009 92)", "oklch(87% 0.009 92)", "oklch(95% 0.009 92)"] },
+      "dark-stage": { "role": "neutral", "displayName": "Deep Model Void", "canonical": "#050606", "tonalRamp": ["#050606", "oklch(27% 0.003 200)", "oklch(39% 0.003 200)", "oklch(51% 0.003 200)", "oklch(63% 0.003 200)", "oklch(75% 0.003 200)", "oklch(87% 0.003 200)", "oklch(95% 0.003 200)"] },
+      "dark-stage-raised": { "role": "neutral", "displayName": "Raised Deep Model Void", "canonical": "#101111", "tonalRamp": ["#101111", "oklch(27% 0.003 200)", "oklch(39% 0.003 200)", "oklch(51% 0.003 200)", "oklch(63% 0.003 200)", "oklch(75% 0.003 200)", "oklch(87% 0.003 200)", "oklch(95% 0.003 200)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Architectural Display", "purpose": "Oversized outlined name typography that acts as spatial structure." },
+      "headline": { "displayName": "Section Headline", "purpose": "Monumental practice, about, and contact statements." },
+      "title": { "displayName": "Hero Title", "purpose": "The concise proposition at the left edge of the opening stage." },
+      "body": { "displayName": "Reading Body", "purpose": "Factual descriptions, biography, and supporting explanation." },
+      "label": { "displayName": "Instrument Label", "purpose": "Navigation, live state, controls, categories, and indexes." }
+    },
+    "shadows": [
+      { "name": "exhibit-chamber", "value": "0 28px 80px rgba(0,0,0,.22)", "purpose": "The only strong ambient shadow; detaches the live 3D theatre from the gallery field." },
+      { "name": "mobile-navigation", "value": "0 18px 50px rgba(0,0,0,.16)", "purpose": "Functional separation for the opened mobile navigation panel." },
+      { "name": "live-halo", "value": "0 0 0 5px color-mix(in srgb, var(--signal) 18%, transparent)", "purpose": "State halo around live dots; never used as general elevation." }
+    ],
+    "motion": [
+      { "name": "ease-orbit", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Spatial easing for gaps, underlines, control scaling, and orbital interface responses." },
+      { "name": "state-fast", "value": "180ms ease", "purpose": "Color, border, opacity, and small state transitions." },
+      { "name": "panel", "value": "240ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Header, navigation, and icon movement." },
+      { "name": "pointer-depth", "value": "140ms linear", "purpose": "Small hero-layer offsets driven by pointer position." },
+      { "name": "reveal", "value": "800ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Blur-to-clear section entrance when reduced motion is not requested." },
+      { "name": "status-pulse", "value": "2.5s ease-in-out infinite", "purpose": "Live viewer status dots only." }
+    ],
+    "breakpoints": [
+      { "name": "compact-desktop", "value": "1180px" },
+      { "name": "stacked", "value": "900px" },
+      { "name": "mobile", "value": "620px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "primary-action",
+      "description": "The square black action that opens the practice story and expands its arrow gap on hover.",
+      "html": "<a class=\"ds-primary-action\" href=\"#practice\">Enter the practice<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"></path></svg></a>",
+      "css": ".ds-primary-action { display:inline-flex; min-height:3rem; align-items:center; gap:1.5rem; padding:.75rem 1rem; border-radius:0; background:var(--ink); color:var(--canvas); font-family:var(--body); font-size:.78rem; font-weight:700; text-decoration:none; transition:gap 260ms var(--ease),background-color 180ms ease,color 180ms ease; } .ds-primary-action:hover { gap:2.1rem; background:var(--signal); color:var(--signal-ink); } .ds-primary-action:focus-visible { outline:3px solid var(--signal); outline-offset:4px; } .ds-primary-action svg { width:1.15rem; fill:none; stroke:currentColor; stroke-linecap:round; stroke-linejoin:round; stroke-width:1.7; }"
+    },
+    {
+      "name": "Header Icon Button",
+      "kind": "button",
+      "refersTo": "icon-button",
+      "description": "A 44px circular utility control for theme and mobile navigation actions.",
+      "html": "<button class=\"ds-icon-button\" type=\"button\" aria-label=\"Toggle theme\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"3.5\"></circle><path d=\"M12 2v2.25M12 19.75V22M4.93 4.93l1.6 1.6M17.47 17.47l1.6 1.6M2 12h2.25M19.75 12H22\"></path></svg></button>",
+      "css": ".ds-icon-button { display:inline-grid; width:2.75rem; height:2.75rem; place-items:center; padding:0; border:1px solid var(--line); border-radius:50%; background:transparent; color:var(--ink); cursor:pointer; transition:background-color 180ms ease,transform 240ms var(--ease); } .ds-icon-button:hover { background:var(--ink); color:var(--canvas); transform:rotate(8deg); } .ds-icon-button:focus-visible { outline:3px solid var(--signal); outline-offset:4px; } .ds-icon-button svg { width:1.05rem; fill:none; stroke:currentColor; stroke-linecap:round; stroke-linejoin:round; stroke-width:1.6; }"
+    },
+    {
+      "name": "Primary Navigation",
+      "kind": "nav",
+      "description": "Compact uppercase links with a hairline active indicator and no pill or tab container.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Preview navigation\"><a class=\"ds-nav-link ds-is-active\" href=\"#home\">Atelier</a><a class=\"ds-nav-link\" href=\"#practice\">Practice</a><a class=\"ds-nav-link\" href=\"#about\">About</a></nav>",
+      "css": ".ds-nav { display:flex; align-items:center; gap:2rem; } .ds-nav-link { position:relative; padding:.8rem 0; color:var(--ink-soft); font-family:var(--body); font-size:.77rem; font-weight:700; letter-spacing:.07em; text-decoration:none; text-transform:uppercase; } .ds-nav-link::after { position:absolute; right:0; bottom:.55rem; left:0; height:1px; background:var(--ink); content:''; transform:scaleX(0); transform-origin:left; transition:transform 240ms var(--ease); } .ds-nav-link:hover,.ds-nav-link.ds-is-active { color:var(--ink); } .ds-nav-link:hover::after,.ds-nav-link.ds-is-active::after { transform:scaleX(1); } .ds-nav-link:focus-visible { outline:3px solid var(--signal); outline-offset:4px; }"
+    },
+    {
+      "name": "Exhibit Chamber",
+      "kind": "custom",
+      "description": "The signature near-black theatre that holds one live model and carries the system's only heavy shadow.",
+      "html": "<section class=\"ds-exhibit\"><header><span class=\"ds-live\"><i></i>Live 3D object</span><strong>My First Blender Model</strong><small>01 — 05</small></header><div class=\"ds-viewer\"><span>Y +01.280</span><b>Interactive 3D object</b></div></section>",
+      "css": ".ds-exhibit { width:min(100%,42rem); overflow:hidden; border-radius:0; background:var(--stage); color:var(--stage-ink); box-shadow:0 28px 80px rgba(0,0,0,.22); font-family:var(--body); } .ds-exhibit header { display:grid; grid-template-columns:1fr 2fr auto; min-height:5rem; align-items:center; gap:1rem; padding:.8rem 1.1rem; border-bottom:1px solid var(--stage-line); } .ds-exhibit header strong { font-family:var(--display); text-align:center; } .ds-exhibit header small,.ds-live { color:var(--stage-soft); font-size:.63rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase; } .ds-live { display:flex; align-items:center; gap:.65rem; } .ds-live i { width:.45rem; height:.45rem; border-radius:50%; background:var(--signal); box-shadow:0 0 0 5px color-mix(in srgb,var(--signal) 18%,transparent); } .ds-viewer { position:relative; display:grid; height:20rem; place-items:center; overflow:hidden; background:radial-gradient(circle at 50% 46%,#2c2e2c 0,#181919 37%,#090a0a 78%); } .ds-viewer::after { position:absolute; inset:0; background:linear-gradient(90deg,transparent 49.9%,rgba(255,255,255,.07) 50%,transparent 50.1%),linear-gradient(transparent 49.9%,rgba(255,255,255,.05) 50%,transparent 50.1%); content:''; pointer-events:none; } .ds-viewer span { position:absolute; z-index:1; top:.8rem; left:1rem; color:var(--stage-soft); font-family:ui-monospace,monospace; font-size:.57rem; letter-spacing:.08em; } .ds-viewer b { z-index:1; font-family:var(--display); font-weight:600; } .ds-exhibit:focus-within { outline:3px solid var(--signal); outline-offset:4px; }"
+    },
+    {
+      "name": "Viewer Control",
+      "kind": "button",
+      "refersTo": "viewer-control",
+      "description": "A circular translucent chamber-edge tool for orbit, reset, and fullscreen actions.",
+      "html": "<button class=\"ds-viewer-control\" type=\"button\" aria-pressed=\"false\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20 7v5h-5M4 17v-5h5M6.1 8.2A7 7 0 0 1 18.7 7M17.9 15.8A7 7 0 0 1 5.3 17\"></path></svg><span>Orbit</span></button>",
+      "css": ".ds-viewer-control { position:relative; display:grid; width:3rem; height:3rem; place-items:center; padding:0; border:1px solid var(--stage-line); border-radius:50%; background:rgba(12,13,13,.72); color:var(--stage-ink); cursor:pointer; backdrop-filter:blur(8px); transition:background-color 180ms ease,color 180ms ease,transform 240ms var(--ease); } .ds-viewer-control:hover,.ds-viewer-control[aria-pressed='true'] { background:var(--signal); color:var(--signal-ink); transform:scale(1.08); } .ds-viewer-control:focus-visible { outline:3px solid var(--signal); outline-offset:4px; } .ds-viewer-control svg { width:1rem; fill:none; stroke:currentColor; stroke-linecap:round; stroke-linejoin:round; stroke-width:1.6; } .ds-viewer-control span { position:absolute; right:3.6rem; padding:.3rem .45rem; background:var(--stage-ink); color:var(--stage); font-size:.58rem; font-weight:700; opacity:0; transform:translateX(.4rem); transition:opacity 180ms ease,transform 180ms ease; } .ds-viewer-control:hover span,.ds-viewer-control:focus-visible span { opacity:1; transform:none; }"
+    },
+    {
+      "name": "Project Rail Cell",
+      "kind": "custom",
+      "refersTo": "project-selector",
+      "description": "A square selector cell attached to the shared viewer, with index, Syne title, live dot, and acid active baseline.",
+      "html": "<button class=\"ds-project-selector ds-is-active\" type=\"button\" aria-pressed=\"true\"><span class=\"ds-project-number\">01</span><span class=\"ds-project-state\"></span><strong>My First<br>Blender Model</strong></button>",
+      "css": ".ds-project-selector { position:relative; display:grid; width:8rem; min-height:10rem; align-content:space-between; gap:1rem; padding:1rem .75rem; border:0; border-right:1px solid var(--stage-line); border-radius:0; background:transparent; color:var(--stage-soft); text-align:left; cursor:pointer; transition:background-color 220ms ease,color 220ms ease; } .ds-project-selector::after { position:absolute; right:0; bottom:0; left:0; height:2px; background:var(--signal); content:''; transform:scaleX(0); transform-origin:left; transition:transform 300ms var(--ease); } .ds-project-selector:hover,.ds-project-selector.ds-is-active { background:var(--stage-raised); color:var(--stage-ink); } .ds-project-selector.ds-is-active::after { transform:scaleX(1); } .ds-project-selector:focus-visible { outline:3px solid var(--signal); outline-offset:-4px; } .ds-project-number { font-size:.59rem; } .ds-project-selector strong { max-width:12ch; font-family:var(--display); font-size:.78rem; line-height:1.15; } .ds-project-state { position:absolute; top:1rem; right:.8rem; width:.35rem; height:.35rem; border:1px solid currentColor; border-radius:50%; } .ds-project-selector.ds-is-active .ds-project-state { border-color:var(--signal); background:var(--signal); box-shadow:0 0 0 4px color-mix(in srgb,var(--signal) 13%,transparent); }"
+    },
+    {
+      "name": "Animation Clip",
+      "kind": "chip",
+      "refersTo": "animation-control",
+      "description": "A square stateful chip generated from animation clips detected in the active GLB.",
+      "html": "<button class=\"ds-animation-clip\" type=\"button\" aria-pressed=\"true\">Idle</button>",
+      "css": ".ds-animation-clip { min-height:2.75rem; padding:.45rem .7rem; border:1px solid var(--stage-line); border-radius:0; background:transparent; color:var(--stage-ink); font-family:var(--body); font-size:.59rem; cursor:pointer; } .ds-animation-clip:hover,.ds-animation-clip[aria-pressed='true'] { border-color:var(--signal); background:var(--signal); color:var(--signal-ink); } .ds-animation-clip:focus-visible { outline:3px solid var(--signal); outline-offset:4px; }"
+    },
+    {
+      "name": "Playback Speed Field",
+      "kind": "input",
+      "description": "The square chamber-native select used to change animation playback speed.",
+      "html": "<label class=\"ds-speed-control\"><span>Speed</span><select class=\"ds-speed-select\" aria-label=\"Animation playback speed\"><option>0.5×</option><option selected>1×</option><option>1.5×</option><option>2×</option></select></label>",
+      "css": ".ds-speed-control { display:inline-flex; align-items:center; gap:.5rem; color:var(--stage-soft); font-family:var(--body); font-size:.58rem; text-transform:uppercase; } .ds-speed-select { min-height:2.75rem; padding:.4rem .65rem; border:1px solid var(--stage-line); border-radius:0; background:var(--stage); color:var(--stage-ink); font:inherit; } .ds-speed-select:hover { border-color:var(--signal); } .ds-speed-select:focus-visible { outline:3px solid var(--signal); outline-offset:4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Living Orbital Atelier",
+    "overview": "This portfolio is a spatial workshop, not a conventional hero followed by project cards. Bone-white gallery light surrounds a near-black model chamber, real GLB objects occupy the visual center, and oversized outlined typography, coordinate marks, orbital rings, and a receding grid make the interface feel like a navigable creative environment.\n\nThe system balances two attitudes: a precise technical instrument and an expressive personal atelier. Syne behaves like architecture, Manrope keeps factual material quiet and legible, and acid chartreuse identifies anything live, selected, progressing, or ready for action. The interface gives visitors a clear sequence: enter the stage, switch and manipulate objects, discover animation clips, then continue into a compact account of practice, identity, and contact.",
+    "keyCharacteristics": [
+      "The real interactive model is the dominant artifact and the near-black exhibit chamber is its permanent stage.",
+      "Bone-white gallery fields and black practice bands alternate in large, decisive planes.",
+      "Acid chartreuse is the single live-state signal and portrait field.",
+      "Hairline axes, grids, coordinates, rings, and outlined name typography create spatial depth without ornamental cards.",
+      "Syne carries identity and architectural headings; Manrope carries explanation, labels, and controls.",
+      "Motion feels orbital and responsive: pointer parallax, rotating rings, scanning lines, expanding gaps, and staged reveals."
+    ],
+    "rules": [
+      { "name": "The Live Signal Rule", "body": "Acid chartreuse means alive, active, selected, progressing, or directly actionable; do not spend it as ambient decoration.", "section": "colors" },
+      { "name": "The Chamber Constancy Rule", "body": "The model theatre stays near-black in both themes so the work remains the same visual event while the surrounding gallery changes.", "section": "colors" },
+      { "name": "The Two-World Rule", "body": "Large bone and black planes may alternate, but intermediate gray cards must not soften the composition into a dashboard.", "section": "colors" },
+      { "name": "The Type-as-Structure Rule", "body": "Oversized Syne may sit behind content, crop at the viewport edge, or appear as a one-pixel outline; it should help define space, never become a wallpaper slogan.", "section": "typography" },
+      { "name": "The Two Voices Plus Coordinates Rule", "body": "Use Syne for constructed display moments, Manrope for all human reading and control text, and monospace only for instrument-like coordinates.", "section": "typography" },
+      { "name": "The Model-at-the-Center Rule", "body": "Every wide composition must preserve the uninterrupted model chamber as the central mass; supporting identity and portrait elements orbit it.", "section": "layout" },
+      { "name": "The Mobile Story Rule", "body": "Preserve the sequence copy → portrait → viewer on mobile. Do not hide or move the portrait below the model.", "section": "layout" },
+      { "name": "The Rail, Not Cards Rule", "body": "Repeated projects belong to one ruled selector rail attached to the shared viewer; do not create a grid of independent project cards.", "section": "layout" },
+      { "name": "The One Heavy Object Rule", "body": "The exhibit chamber is the only surface with a large ambient shadow; ordinary sections and rail cells remain flat.", "section": "elevation" },
+      { "name": "The Drawn Depth Rule", "body": "Prefer lines, rings, perspective, overlap, and tonal gradients before adding another shadow.", "section": "elevation" },
+      { "name": "The Circle Has a Job Rule", "body": "Use circles only for orbit, live state, compact icon controls, or portrait geometry; never round rectangular content containers for softness.", "section": "shapes" },
+      { "name": "The Hard Frame Rule", "body": "Stage, rail, action, field, and section boundaries stay square and precise.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do keep a real interactive GLB as the dominant visual artifact in the opening experience.",
+      "Do use Live Acid for live, active, selected, progressing, focused, or portrait-field roles.",
+      "Do build depth with coordinate hairlines, perspective grids, rings, overlap, and restrained parallax.",
+      "Do preserve the singular exhibit chamber and its attached horizontal model rail.",
+      "Do let Syne headings behave like architecture while keeping factual copy concise in Manrope.",
+      "Do keep light and dark themes role-equivalent, all controls keyboard-visible, and circular theme/menu controls at least 44px.",
+      "Do preserve reduced-motion behavior by removing parallax, long reveals, and continuous orbital movement when requested."
+    ],
+    "donts": [
+      "Don't turn the portfolio into a conventional hero followed by a grid of project cards.",
+      "Don't introduce a second decorative accent or use chartreuse on passive decoration that could be mistaken for state.",
+      "Don't brighten the model chamber in light mode or flatten it into the surrounding gallery canvas.",
+      "Don't round rectangular stages, rail cells, buttons, fields, or content panels into a soft SaaS-card language.",
+      "Don't add shadows to every surface; the exhibit chamber must remain the one heavy object.",
+      "Don't remove the portrait from the first mobile viewport sequence or place it after the viewer.",
+      "Don't use Syne for long reading text or monospace for general labels and prose."
+    ]
+  }
+}

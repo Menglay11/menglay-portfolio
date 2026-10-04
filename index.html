@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Kaing Menglay's interactive portfolio of 3D modelling, animation, Blender, and software development work.">
+    <meta name="theme-color" content="#e9e7df">
+    <title>Kaing Menglay — Interactive 3D Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230d0e0e'/%3E%3Cpath d='M14 15v34h8V37l12 12h11L29 32l15-17H34L22 29V15z' fill='%23d8ff3e'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Syne:wght@500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+      (function () {
+        try {
+          var savedTheme = localStorage.getItem('km-portfolio-theme');
+          if (savedTheme === 'dark' || savedTheme === 'light') document.documentElement.dataset.theme = savedTheme;
+        } catch (error) { document.documentElement.dataset.theme = 'light'; }
+      }());
+    </script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/model-viewer.js" defer></script>
+  </head>
+  <body>
+    <!--
+      THESIS: The portfolio is a living orbital atelier where Kaing's real GLB work occupies the environment, refusing the conventional hero-plus-project-card portfolio.
+      OWN-WORLD: Bone-white gallery light surrounds a near-black model chamber; acid chartreuse marks live state, hairline coordinates create depth, and oversized Syne typography behaves like architecture.
+      STORY: Visitors meet Kaing through a focused identity-and-portrait hero, then enter the model stage, switch and manipulate real objects, discover animation clips, and continue through a compact account of practice and contact.
+      FIRST VIEWPORT: A full-height spatial stage pairs concise identity and actions at left with a large portrait and live status at right; the complete animation and modelling exhibit follows immediately below.
+      FORM: Orbital atelier and living model theatre, candidate 6 of the grounded direction list; concept seed 6fcedcfd.
+      FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+    -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="scroll-meter" aria-hidden="true"><span data-scroll-meter></span></div>
+
+    <header class="site-header" data-site-header>
+      <a class="identity" href="#home" aria-label="Kaing Menglay, back to home"><span class="identity__mark" aria-hidden="true">KM</span><span class="identity__name">Kaing Menglay</span></a>
+      <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation" data-navigation><a class="nav-link is-active" href="#home" aria-current="page">Atelier</a><a class="nav-link" href="#work">3D Work</a><a class="nav-link" href="#practice">Practice</a><a class="nav-link" href="#about">About</a><a class="nav-link" href="#contact">Contact</a></nav>
+      <div class="header-actions">
+        <span class="availability"><i aria-hidden="true"></i> 3D viewer online</span>
+        <button class="theme-toggle icon-button" type="button" aria-label="Switch to dark theme" aria-pressed="false" data-theme-toggle><svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"></circle><path d="M12 2v2.25M12 19.75V22M4.93 4.93l1.6 1.6M17.47 17.47l1.6 1.6M2 12h2.25M19.75 12H22M4.93 19.07l1.6-1.6M17.47 6.53l1.6-1.6"></path></svg><svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.4A8.2 8.2 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"></path></svg></button>
+        <button class="nav-toggle icon-button" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation" data-nav-toggle><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"></path></svg></button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="atelier" id="home" aria-labelledby="hero-title">
+        <div class="spatial-field" aria-hidden="true"><div class="spatial-field__orb spatial-field__orb--one"></div><div class="spatial-field__orb spatial-field__orb--two"></div><div class="spatial-field__axis"></div></div>
+        <div class="hero-type" aria-hidden="true"><span>KAING</span><span>MENGLAY</span></div>
+
+        <div class="hero-layout">
+          <div class="hero-intro" data-depth="0.35">
+            <h1 id="hero-title">I build ideas<br>you can orbit.</h1>
+            <p class="hero-role">Computer Science student · Software Engineering</p>
+            <p>Exploring software, 3D modelling, and animation through hands-on practice.</p>
+            <div class="hero-actions">
+              <a class="primary-action" href="#work">Explore 3D work<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+              <a class="secondary-action" href="#about">About me<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+            </div>
+            <dl class="hero-details" aria-label="Current profile">
+              <div><dt>Based at</dt><dd>CADT</dd></div>
+              <div><dt>Studying</dt><dd>Year 3</dd></div>
+              <div><dt>Focus</dt><dd>3D + Web</dd></div>
+            </dl>
+          </div>
+
+          <figure class="hero-portrait" data-depth="0.6">
+            <div class="hero-portrait__orbits" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="hero-portrait__image"><img src="assets/kaing-menglay-portrait.png" alt="Kaing Menglay standing with his arms crossed" width="1024" height="1536"></div>
+            <div class="hero-portrait__note hero-portrait__note--top"><span>Currently</span><strong>Learning by making</strong></div>
+            <figcaption><span>Kaing Menglay</span><small>Computer Science · CADT</small></figcaption>
+          </figure>
+        </div>
+
+        <a class="scroll-cue" href="#work"><span>Animation &amp; modelling below</span><i aria-hidden="true"></i></a>
+      </section>
+
+      <section class="work-section" id="work" aria-labelledby="work-section-title">
+        <header class="work-intro reveal">
+          <h2 id="work-section-title">Animation &amp;<br>Modelling</h2>
+          <p>Explore the real models in the browser. Rotate and zoom each object, switch projects, and play the animation clips included in the GLB files.</p>
+        </header>
+
+        <section class="exhibit" aria-labelledby="work-title">
+          <header class="exhibit-header"><div class="exhibit-live"><i aria-hidden="true"></i> Live 3D object</div><div class="exhibit-heading"><p data-project-category>Interactive 3D work</p><h2 id="work-title" data-project-title>Preparing exhibit</h2></div><p class="exhibit-index"><span data-project-position>—</span><i></i><span data-project-total>05</span></p></header>
+          <div class="viewer-shell" data-viewer-shell>
+            <div class="viewer-coordinate viewer-coordinate--top" aria-hidden="true">Y +01.280</div><div class="viewer-coordinate viewer-coordinate--side" aria-hidden="true">X −00.450</div>
+            <model-viewer id="portfolio-viewer" camera-controls touch-action="pan-y" interaction-prompt="none" shadow-intensity="1" shadow-softness="0.75" exposure="1.05" environment-image="neutral" alt="Interactive 3D model" aria-describedby="viewer-instructions" data-model-viewer></model-viewer>
+            <div class="loading-state" data-loading-state role="status" aria-live="polite"><span class="loading-state__label" data-loading-label>Preparing model…</span><span class="loading-state__track" aria-hidden="true"><span data-loading-bar></span></span></div>
+            <div class="error-state" data-error-state hidden role="alert"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v5M12 17h.01M10.3 3.7 2.8 17a2 2 0 0 0 1.75 3h14.9a2 2 0 0 0 1.75-3L13.7 3.7a2 2 0 0 0-3.4 0Z"></path></svg><div><strong>Model unavailable</strong><p data-error-message>Check that the GLB file exists, then try again.</p><button class="text-button" type="button" data-retry-model>Try loading again</button></div></div>
+            <div class="viewer-toolbar" aria-label="3D viewer controls"><button class="viewer-control" type="button" aria-pressed="false" data-auto-rotate><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5M6.1 8.2A7 7 0 0 1 18.7 7M17.9 15.8A7 7 0 0 1 5.3 17"></path></svg><span>Orbit</span></button><button class="viewer-control" type="button" data-reset-camera><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.34-5.66L4 8.68M4 4v4.68h4.68"></path></svg><span>Reset</span></button><button class="viewer-control" type="button" data-fullscreen><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"></path></svg><span data-fullscreen-label>Expand</span></button></div>
+            <p class="viewer-instructions" id="viewer-instructions"><span>Drag</span> to rotate <i></i> <span>Scroll</span> to zoom</p>
+          </div>
+
+          <div class="project-deck">
+            <div class="project-navigation" aria-label="Project selection" data-project-groups></div>
+            <div class="project-inspector"><p class="project-description" data-project-description>Project information will appear here.</p><section class="animation-panel" aria-labelledby="animation-title" data-animation-panel><div class="animation-panel__heading"><h3 id="animation-title">Motion clips</h3><label class="speed-control" data-speed-control hidden><span>Speed</span><select data-playback-speed aria-label="Animation playback speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label></div><div class="animation-clips" data-animation-clips aria-label="Available animation clips"></div><p class="animation-empty" data-animation-empty>Animation clips will appear after the model loads.</p><div class="playback-controls" data-playback-controls hidden><button type="button" data-animation-play>Play</button><button type="button" data-animation-pause>Pause</button><button type="button" data-animation-resume>Resume</button><button type="button" data-animation-restart>Restart</button></div></section></div>
+          </div>
+          <p class="sr-only" aria-live="polite" aria-atomic="true" data-accessible-status></p>
+          <noscript><div class="noscript-message"><strong>JavaScript is needed for the interactive viewer.</strong><p>Enable JavaScript to inspect the five 3D projects.</p></div></noscript>
+        </section>
+      </section>
+
+      <section class="practice-section" id="practice" aria-labelledby="practice-title">
+        <header class="practice-heading reveal"><h2 id="practice-title">Between the mesh<br>and the machine.</h2><span>I’m learning to make digital objects feel clear, responsive, and alive—from Blender’s viewport to the browser.</span></header>
+        <div class="practice-orbit" aria-label="Skills in practice"><div class="practice-core reveal"><span>Current<br>practice</span></div><ul><li class="reveal"><strong>3D Modelling</strong><small>Form, proportion, and interactive GLB objects</small></li><li class="reveal"><strong>Animation</strong><small>Motion clips, playback, and character studies</small></li><li class="reveal"><strong>Blender</strong><small>The workshop behind this collection</small></li><li class="reveal"><strong>Software</strong><small>Responsive systems built for the web</small></li><li class="reveal"><strong>Problem solving</strong><small>Making every state understandable and recoverable</small></li></ul></div>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="about-portrait reveal"><span class="about-portrait__ring" aria-hidden="true"></span><img src="assets/kaing-menglay-portrait.png" alt="Kaing Menglay" width="1024" height="1536"><p>Learning by making</p></div>
+        <div class="about-copy reveal"><h2 id="about-title">Curious by default.<br>Technical by practice.</h2><p>I’m a third-year Computer Science student specializing in Software Engineering at CADT. I’m interested in technology, software development, 3D modelling, animation, and learning new skills. I enjoy collaborating with friends, solving problems, and strengthening my knowledge through hands-on practice.</p><dl class="study-details"><div><dt>University</dt><dd>CADT</dd></div><div><dt>Year</dt><dd>Third year</dd></div><div><dt>Major</dt><dd>Computer Science</dd></div><div><dt>Focus</dt><dd>Software Engineering</dd></div></dl></div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-orbit" aria-hidden="true"><span></span><span></span><span></span></div><h2 id="contact-title">Let’s create something<br><em>worth orbiting.</em></h2><a class="contact-link" href="mailto:kaingmenglay@gmail.com"><span>kaingmenglay@gmail.com</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"></path></svg></a><div class="social-placeholders" aria-label="Social profile placeholders"><span>GitHub <small>Link to be added</small></span><span>LinkedIn <small>Link to be added</small></span></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>© <span data-current-year></span> Kaing Menglay</p><p>Designed around real 3D work</p><a href="#home">Back to top <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"></path></svg></a></footer>
+  </body>
+</html>
