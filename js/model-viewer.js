@@ -21,14 +21,12 @@
     elements.errorMessage = document.querySelector('[data-error-message]');
     elements.retry = document.querySelector('[data-retry-model]');
     elements.status = document.querySelector('[data-accessible-status]');
-    elements.clips = document.querySelector('[data-animation-clips]');
     elements.empty = document.querySelector('[data-animation-empty]');
     elements.playbackControls = document.querySelector('[data-playback-controls]');
     elements.speedControl = document.querySelector('[data-speed-control]');
     elements.speed = document.querySelector('[data-playback-speed]');
     elements.play = document.querySelector('[data-animation-play]');
     elements.pause = document.querySelector('[data-animation-pause]');
-    elements.resume = document.querySelector('[data-animation-resume]');
     elements.restart = document.querySelector('[data-animation-restart]');
     elements.autoRotate = document.querySelector('[data-auto-rotate]');
     elements.resetCamera = document.querySelector('[data-reset-camera]');
@@ -90,9 +88,6 @@
 
   function setActiveClip(name) {
     state.activeAnimation = name;
-    elements.clips?.querySelectorAll('.animation-clip').forEach((button) => {
-      button.setAttribute('aria-pressed', String(button.dataset.animationName === name));
-    });
   }
 
   function selectAnimation(name, shouldPlay) {
@@ -118,8 +113,7 @@
   }
 
   function updateAnimationControls(animationNames) {
-    if (!elements.clips || !elements.empty || !elements.playbackControls) return;
-    elements.clips.replaceChildren();
+    if (!elements.empty || !elements.playbackControls) return;
 
     if (!animationNames.length) {
       elements.empty.hidden = false;
@@ -136,19 +130,12 @@
       return;
     }
 
-    const fragment = document.createDocumentFragment();
-    animationNames.forEach((name) => {
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'animation-clip';
-      button.dataset.animationName = name;
-      button.textContent = name;
-      button.setAttribute('aria-pressed', 'false');
-      button.addEventListener('click', () => selectAnimation(name, true));
-      fragment.append(button);
-    });
-
-    elements.clips.append(fragment);
+    const initialAnimation = animationNames[0];
+    if (elements.viewer) {
+      elements.viewer.animationName = initialAnimation;
+      elements.viewer.currentTime = 0;
+    }
+    setActiveClip(initialAnimation);
     elements.empty.hidden = true;
     elements.playbackControls.hidden = false;
     if (elements.speedControl) elements.speedControl.hidden = false;
@@ -242,13 +229,6 @@
     announce(`Paused animation ${state.activeAnimation}.`);
   }
 
-  function resumeAnimation() {
-    if (!state.activeAnimation) return;
-    elements.viewer.play({ repetitions: Infinity });
-    state.playing = true;
-    announce(`Resumed animation ${state.activeAnimation}.`);
-  }
-
   function restartAnimation() {
     const animations = Array.from(elements.viewer?.availableAnimations || []);
     const animation = state.activeAnimation || animations[0];
@@ -316,7 +296,6 @@
     elements.retry?.addEventListener('click', () => loadProject(state.project, true));
     elements.play?.addEventListener('click', playAnimation);
     elements.pause?.addEventListener('click', pauseAnimation);
-    elements.resume?.addEventListener('click', resumeAnimation);
     elements.restart?.addEventListener('click', restartAnimation);
     elements.speed?.addEventListener('change', () => {
       const speed = Number(elements.speed.value);

@@ -180,10 +180,11 @@ model-viewer { position: relative; z-index: 2; display: block; width: 100%; heig
 .animation-panel__heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .animation-panel h3 { margin: 0; font-size: .64rem; letter-spacing: .08em; text-transform: uppercase; }
 .speed-control { display: flex; align-items: center; gap: .5rem; color: var(--stage-soft); font-size: .58rem; text-transform: uppercase; }
-.speed-control select { min-height: 2.75rem; border: 1px solid var(--stage-line); border-radius: 0; background: var(--stage); color: var(--stage-ink); }
-.animation-clips, .playback-controls { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .65rem; }
-.animation-clip, .playback-controls button { min-height: 2.75rem; padding: .45rem .7rem; border: 1px solid var(--stage-line); border-radius: 0; background: transparent; color: var(--stage-ink); font-size: .59rem; cursor: pointer; }
-.animation-clip:hover, .animation-clip[aria-pressed="true"], .playback-controls button:hover { border-color: var(--signal); background: var(--signal); color: var(--signal-ink); }
+.speed-control select { min-width: 4.5rem; min-height: 2.75rem; padding: 0 .65rem; border: 1px solid var(--stage-line); border-radius: 0; background: var(--stage); color: var(--stage-ink); }
+.playback-controls { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; margin-top: .75rem; }
+.playback-controls button { min-height: 3.5rem; padding: .75rem .6rem; border: 1px solid var(--stage-line); border-radius: 0; background: transparent; color: var(--stage-ink); font-size: .72rem; font-weight: 700; cursor: pointer; transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease; }
+.playback-controls button[data-animation-play] { border-color: var(--signal); background: var(--signal); color: var(--signal-ink); }
+.playback-controls button:hover { border-color: var(--signal); background: var(--signal); color: var(--signal-ink); }
 .animation-empty { margin: .65rem 0 0; color: var(--stage-soft); font-size: .62rem; }
 .noscript-message { margin: 1rem; padding: 1rem; border: 1px solid var(--stage-line); }
 

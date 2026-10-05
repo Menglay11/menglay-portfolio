@@ -59,7 +59,7 @@ In Blender:
 5. If an animation depends on a rig, verify that the mesh, armature, and required actions are included in the export.
 6. Reopen or test the exported GLB before replacing the portfolio copy.
 
-The website reads `modelViewer.availableAnimations` after each model finishes loading. It creates one button per detected clip and does not hard-code clip names. A model with no clips receives a simple “This model does not contain animation clips” message.
+The website reads `modelViewer.availableAnimations` after each model finishes loading and uses the first detected clip for the compact playback controls. A model with no clips receives a simple “This model does not contain animation clips” message.
 
 ## Editing project information
 
@@ -121,7 +121,7 @@ All website asset paths are relative, so the site works from a GitHub Pages proj
 - Confirm the navigation menu opens, closes, and returns focus correctly.
 - Switch all five projects rapidly and confirm only the current model appears.
 - Rotate with one finger, pinch to zoom, and scroll the page without horizontal overflow.
-- Test animation selection, play, pause, resume, restart, and speed controls on both animated models.
+- Test play, pause, restart, and speed controls on both animated models.
 - Test light and dark themes and reload to confirm the chosen theme persists.
 
 ## Replace the social placeholders
