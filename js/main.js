@@ -7,7 +7,6 @@
       title: 'My First Blender Model',
       category: '3D Models',
       src: 'models/Blender_First.glb',
-      description: 'Placeholder — replace this with a short description of the model, its purpose, and what you learned while creating it.',
       alt: 'Interactive view of Kaing Menglay’s first Blender model'
     },
     {
@@ -15,7 +14,6 @@
       title: 'Car',
       category: '3D Models',
       src: 'models/Car.glb',
-      description: 'Placeholder — add your own description of this car model without changing the filename unless you also update this project entry.',
       alt: 'Interactive view of Kaing Menglay’s car model'
     },
     {
@@ -23,7 +21,6 @@
       title: 'Cup',
       category: '3D Models',
       src: 'models/Cup.glb',
-      description: 'Placeholder — add the confirmed context, goals, or observations you want visitors to know about this cup model.',
       alt: 'Interactive view of Kaing Menglay’s cup model'
     },
     {
@@ -31,7 +28,6 @@
       title: 'Animation Study',
       category: 'Models with Animation',
       src: 'models/Animation.glb',
-      description: 'Placeholder — describe the animation only after you are ready to share its real purpose, process, or learning outcome.',
       alt: 'Interactive view of Kaing Menglay’s animation study'
     },
     {
@@ -39,7 +35,6 @@
       title: 'First Animated Character',
       category: 'Models with Animation',
       src: 'models/firstCharacterWithAnimation.glb',
-      description: 'Placeholder — replace this with accurate details about the character and its animation when those details are ready.',
       alt: 'Interactive view of Kaing Menglay’s first animated character'
     }
   ];
@@ -54,7 +49,6 @@
     projectGroups: '[data-project-groups]',
     projectTitle: '[data-project-title]',
     projectCategory: '[data-project-category]',
-    projectDescription: '[data-project-description]',
     projectPosition: '[data-project-position]',
     projectTotal: '[data-project-total]',
     currentYear: '[data-current-year]'
@@ -197,13 +191,11 @@
     const index = PROJECTS.findIndex((item) => item.id === project.id);
     const title = document.querySelector(SELECTORS.projectTitle);
     const category = document.querySelector(SELECTORS.projectCategory);
-    const description = document.querySelector(SELECTORS.projectDescription);
     const position = document.querySelector(SELECTORS.projectPosition);
     const total = document.querySelector(SELECTORS.projectTotal);
 
     if (title) title.textContent = project.title;
     if (category) category.textContent = project.category;
-    if (description) description.textContent = project.description;
     if (position) position.textContent = String(index + 1).padStart(2, '0');
     if (total) total.textContent = String(PROJECTS.length).padStart(2, '0');
 
