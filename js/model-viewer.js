@@ -6,7 +6,8 @@
     loadId: 0,
     activeAnimation: '',
     playing: false,
-    ready: false
+    ready: false,
+    fallbackFullscreen: false
   };
 
   const elements = {};
@@ -258,26 +259,61 @@
     announce('Camera view reset.');
   }
 
+  function nativeFullscreenElement() {
+    return document.fullscreenElement || document.webkitFullscreenElement || null;
+  }
+
+  function setFallbackFullscreen(active) {
+    state.fallbackFullscreen = active;
+    elements.shell?.classList.toggle('is-fallback-fullscreen', active);
+    document.documentElement.classList.toggle('has-viewer-fullscreen', active);
+    updateFullscreenControl();
+  }
+
   async function toggleFullscreen() {
     if (!elements.shell) return;
 
-    try {
-      if (document.fullscreenElement) {
-        await document.exitFullscreen();
-      } else if (elements.shell.requestFullscreen) {
-        await elements.shell.requestFullscreen();
-      } else {
-        announce('Fullscreen is not supported in this browser. You can still rotate and zoom the model here.');
-      }
-    } catch (error) {
-      announce('Fullscreen could not be opened. You can still rotate and zoom the model here.');
+    if (state.fallbackFullscreen) {
+      setFallbackFullscreen(false);
+      announce('Fullscreen closed.');
+      return;
     }
+
+    if (nativeFullscreenElement()) {
+      const exitFullscreen = document.exitFullscreen || document.webkitExitFullscreen;
+      if (!exitFullscreen) return;
+
+      try {
+        await exitFullscreen.call(document);
+      } catch (error) {
+        announce('Fullscreen could not be closed.');
+      }
+      return;
+    }
+
+    const requestFullscreen = elements.shell.requestFullscreen || elements.shell.webkitRequestFullscreen;
+    if (requestFullscreen) {
+      try {
+        await requestFullscreen.call(elements.shell);
+        return;
+      } catch (error) {
+        // Some mobile browsers expose the API but reject it for non-video elements.
+      }
+    }
+
+    setFallbackFullscreen(true);
+    announce('Fullscreen opened. Press the fullscreen button again or Escape to close it.');
   }
 
   function updateFullscreenControl() {
-    const active = Boolean(document.fullscreenElement);
+    const active = Boolean(nativeFullscreenElement() || state.fallbackFullscreen);
     if (elements.fullscreenLabel) elements.fullscreenLabel.textContent = active ? 'Exit fullscreen' : 'Fullscreen';
     if (elements.fullscreen) elements.fullscreen.setAttribute('aria-label', active ? 'Exit fullscreen' : 'View model in fullscreen');
+  }
+
+  function handleFullscreenChange() {
+    if (nativeFullscreenElement() && state.fallbackFullscreen) setFallbackFullscreen(false);
+    else updateFullscreenControl();
   }
 
   function detectWebGL() {
@@ -305,7 +341,14 @@
     elements.autoRotate?.addEventListener('click', toggleAutoRotate);
     elements.resetCamera?.addEventListener('click', resetCamera);
     elements.fullscreen?.addEventListener('click', toggleFullscreen);
-    document.addEventListener('fullscreenchange', updateFullscreenControl);
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && state.fallbackFullscreen) {
+        setFallbackFullscreen(false);
+        announce('Fullscreen closed.');
+      }
+    });
 
     window.addEventListener('portfolio:project-selected', (event) => {
       loadProject(event.detail.project, event.detail.announce);
