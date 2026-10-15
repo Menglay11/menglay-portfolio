@@ -84,6 +84,7 @@
 
         <section class="exhibit" aria-labelledby="work-title">
           <header class="exhibit-header"><div class="exhibit-live"><i aria-hidden="true"></i> Live 3D object</div><div class="exhibit-heading"><p data-project-category>Interactive 3D work</p><h2 id="work-title" data-project-title>Preparing exhibit</h2></div><p class="exhibit-index"><span data-project-position>—</span><i></i><span data-project-total>05</span></p></header>
+          <div class="exhibit-stage">
           <div class="viewer-shell" data-viewer-shell>
             <div class="viewer-coordinate viewer-coordinate--top" aria-hidden="true">Y +01.280</div><div class="viewer-coordinate viewer-coordinate--side" aria-hidden="true">X −00.450</div>
             <model-viewer id="portfolio-viewer" camera-controls touch-action="pan-y" interaction-prompt="none" shadow-intensity="1" shadow-softness="0.75" exposure="1.05" environment-image="neutral" alt="Interactive 3D model" aria-describedby="viewer-instructions" data-model-viewer></model-viewer>
@@ -93,9 +94,11 @@
             <p class="viewer-instructions" id="viewer-instructions"><span>Drag</span> to rotate <i></i> <span>Scroll</span> to zoom</p>
           </div>
 
-          <div class="project-deck">
+          <aside class="project-deck" aria-label="Project browser">
+            <div class="project-deck__heading"><h3>Browse objects</h3><p><span aria-hidden="true">05</span><span class="sr-only">Five</span> projects</p></div>
             <div class="project-navigation" aria-label="Project selection" data-project-groups></div>
             <div class="project-inspector"><section class="animation-panel" aria-labelledby="animation-title" data-animation-panel><div class="animation-panel__heading"><h3 id="animation-title">Motion controls</h3><label class="speed-control" data-speed-control hidden><span>Speed</span><select data-playback-speed aria-label="Animation playback speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label></div><p class="animation-empty" data-animation-empty>Animation clips will appear after the model loads.</p><div class="playback-controls" data-playback-controls hidden><button type="button" data-animation-play>Play</button><button type="button" data-animation-pause>Pause</button><button type="button" data-animation-restart>Restart</button></div></section></div>
+          </aside>
           </div>
           <p class="sr-only" aria-live="polite" aria-atomic="true" data-accessible-status></p>
           <noscript><div class="noscript-message"><strong>JavaScript is needed for the interactive viewer.</strong><p>Enable JavaScript to inspect the five 3D projects.</p></div></noscript>

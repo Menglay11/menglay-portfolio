@@ -132,7 +132,8 @@ html[data-theme="dark"] .theme-icon--moon { opacity: 1; transform: none; }
 .exhibit-index { display: flex; align-items: center; gap: .55rem; margin: 0; font-size: .64rem; font-variant-numeric: tabular-nums; }
 .exhibit-index i { width: 2rem; height: 1px; background: var(--stage-line); }
 
-.viewer-shell { position: relative; height: min(68vh, 42rem); min-height: 32rem; overflow: hidden; background: radial-gradient(circle at 50% 46%, #2c2e2c 0, #181919 37%, #090a0a 78%); }
+.exhibit-stage { display: grid; grid-template-columns: minmax(0, 1fr) clamp(18rem, 23vw, 21rem); height: clamp(34rem, 68vh, 46rem); }
+.viewer-shell { position: relative; min-width: 0; min-height: 34rem; overflow: hidden; border-right: 1px solid var(--stage-line); background: radial-gradient(circle at 50% 46%, #2c2e2c 0, #181919 37%, #090a0a 78%); }
 .viewer-shell::before, .viewer-shell::after { position: absolute; z-index: 1; content: ""; pointer-events: none; }
 .viewer-shell::before { right: 7%; bottom: 10%; left: 7%; height: 17%; border: 1px solid var(--stage-line); border-radius: 50%; transform: perspective(200px) rotateX(66deg); }
 .viewer-shell::after { inset: 0; background: linear-gradient(90deg, transparent 49.9%, rgba(255,255,255,.07) 50%, transparent 50.1%), linear-gradient(transparent 49.9%, rgba(255,255,255,.05) 50%, transparent 50.1%); }
@@ -162,20 +163,28 @@ model-viewer { position: relative; z-index: 2; display: block; width: 100%; heig
 .viewer-shell:fullscreen { height: 100vh; background: var(--stage); }
 .viewer-shell:fullscreen model-viewer { height: 100vh; }
 
-.project-deck { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(15rem, .8fr); min-height: 10.5rem; border-top: 1px solid var(--stage-line); }
-.project-navigation { display: flex; min-width: 0; border-right: 1px solid var(--stage-line); overflow-x: auto; scrollbar-width: thin; }
-.project-group { display: contents; }
-.project-group h3 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-.project-list { display: contents; }
-.project-selector { position: relative; display: grid; min-width: 6.8rem; flex: 1 0 6.8rem; align-content: space-between; gap: 1rem; padding: 1rem .75rem; border: 0; border-right: 1px solid var(--stage-line); background: transparent; color: var(--stage-soft); text-align: left; cursor: pointer; transition: background-color 220ms ease, color 220ms ease; }
+.project-deck { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; min-width: 0; min-height: 0; background: var(--stage); }
+.project-deck__heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4.2rem; padding: .85rem 1rem; border-bottom: 1px solid var(--stage-line); }
+.project-deck__heading h3, .project-deck__heading p { margin: 0; }
+.project-deck__heading h3 { font-family: var(--display); font-size: 1rem; font-weight: 600; letter-spacing: -.02em; }
+.project-deck__heading p { color: var(--stage-soft); font-size: .7rem; font-variant-numeric: tabular-nums; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.project-navigation { min-width: 0; overflow-y: auto; scrollbar-color: var(--stage-line) transparent; scrollbar-width: thin; overscroll-behavior: contain; }
+.project-navigation::-webkit-scrollbar { width: .35rem; height: .35rem; }
+.project-navigation::-webkit-scrollbar-track { background: transparent; }
+.project-navigation::-webkit-scrollbar-thumb { background: var(--stage-line); }
+.project-group { display: block; }
+.project-group h3 { position: sticky; z-index: 2; top: 0; margin: 0; padding: .55rem 1rem; border-bottom: 1px solid var(--stage-line); background: var(--stage); color: var(--stage-soft); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; }
+.project-list { display: grid; }
+.project-selector { position: relative; display: grid; grid-template-columns: 2.4rem minmax(0, 1fr) auto; align-items: center; gap: .85rem; min-height: 6.65rem; padding: 1rem; border: 0; border-bottom: 1px solid var(--stage-line); background: transparent; color: var(--stage-soft); text-align: left; cursor: pointer; transition: background-color 220ms ease, color 220ms ease; }
 .project-selector::after { position: absolute; right: 0; bottom: 0; left: 0; height: 2px; background: var(--signal); content: ""; transform: scaleX(0); transform-origin: left; transition: transform 300ms var(--ease); }
 .project-selector:hover, .project-selector.is-active { background: var(--stage-raised); color: var(--stage-ink); }
 .project-selector.is-active::after { transform: scaleX(1); }
-.project-selector__number { font-size: .59rem; font-variant-numeric: tabular-nums; }
-.project-selector__name { max-width: 12ch; font-family: var(--display); font-size: .78rem; font-weight: 600; line-height: 1.15; }
-.project-selector__state { position: absolute; top: 1rem; right: .8rem; width: .35rem; height: .35rem; border: 1px solid currentColor; border-radius: 50%; }
+.project-selector__number { color: color-mix(in srgb, var(--stage-soft) 45%, transparent); font-family: var(--display); font-size: 2rem; font-variant-numeric: tabular-nums; font-weight: 600; letter-spacing: -.04em; transition: color 220ms ease; }
+.project-selector__name { max-width: 15ch; font-family: var(--display); font-size: 1rem; font-weight: 600; line-height: 1.15; }
+.project-selector__state { width: .45rem; height: .45rem; border: 1px solid currentColor; border-radius: 50%; }
+.project-selector.is-active .project-selector__number { color: var(--signal); }
 .project-selector.is-active .project-selector__state { border-color: var(--signal); background: var(--signal); box-shadow: 0 0 0 4px color-mix(in srgb, var(--signal) 13%, transparent); }
-.project-inspector { padding: 1rem; }
+.project-inspector { padding: 1rem; border-top: 1px solid var(--stage-line); }
 .animation-panel { width: 100%; }
 .animation-panel__heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .animation-panel h3 { margin: 0; font-size: .64rem; letter-spacing: .08em; text-transform: uppercase; }
@@ -265,9 +274,7 @@ model-viewer { position: relative; z-index: 2; display: block; width: 100%; heig
   .hero-intro h1 { font-size: clamp(3.5rem, 6.7vw, 5.2rem); }
   .hero-portrait__image { width: min(35vw, 25rem); }
   .hero-portrait__note { right: 0; }
-  .viewer-shell { height: min(64vh, 38rem); }
-  .project-deck { grid-template-columns: 1fr; }
-  .project-navigation { border-right: 0; border-bottom: 1px solid var(--stage-line); }
+  .exhibit-stage { grid-template-columns: minmax(0, 1fr) 18rem; height: min(64vh, 38rem); }
   .practice-heading { grid-template-columns: 1.4fr .8fr; }
 }
 
@@ -298,8 +305,17 @@ model-viewer { position: relative; z-index: 2; display: block; width: 100%; heig
   .exhibit-header { grid-template-columns: 1fr auto; }
   .exhibit-live { display: none; }
   .exhibit-heading { text-align: left; }
-  .viewer-shell { height: min(60vh, 34rem); min-height: 27rem; }
-  .project-selector { min-width: 8.5rem; }
+  .exhibit-stage { grid-template-columns: 1fr; height: auto; }
+  .viewer-shell { height: min(60vh, 34rem); min-height: 27rem; border-right: 0; border-bottom: 1px solid var(--stage-line); }
+  .project-deck { grid-template-rows: auto auto auto; }
+  .project-navigation { display: flex; overflow-x: auto; overflow-y: hidden; border-bottom: 1px solid var(--stage-line); }
+  .project-group, .project-list { display: contents; }
+  .project-group h3 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .project-selector { grid-template-columns: 1fr auto; grid-template-rows: auto auto; min-width: 10rem; min-height: 7rem; flex: 0 0 10rem; align-content: space-between; border-right: 1px solid var(--stage-line); border-bottom: 0; }
+  .project-selector__number { font-size: .7rem; letter-spacing: 0; }
+  .project-selector__name { grid-column: 1 / -1; }
+  .project-selector__state { grid-column: 2; grid-row: 1; }
+  .project-inspector { border-top: 0; }
   .scroll-cue { display: none; }
   .practice-heading { grid-template-columns: 1fr; gap: 1.4rem; }
   .practice-heading > span { max-width: 50ch; }
@@ -340,8 +356,6 @@ model-viewer { position: relative; z-index: 2; display: block; width: 100%; heig
   .viewer-toolbar { top: auto; right: 50%; bottom: 2.65rem; display: flex; transform: translateX(50%); }
   .viewer-control span { display: none; }
   .viewer-instructions { font-size: .56rem; }
-  .project-deck { min-height: 0; }
-  .project-navigation { overflow-x: auto; }
   .project-selector { min-width: 9.25rem; min-height: 7rem; }
   .practice-section { padding-top: 5rem; padding-bottom: 5rem; }
   .practice-heading h2 { font-size: clamp(2.8rem, 14vw, 4.2rem); }
