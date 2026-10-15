@@ -245,18 +245,25 @@
   function toggleAutoRotate() {
     if (!elements.viewer || !elements.autoRotate) return;
     const active = !elements.viewer.hasAttribute('auto-rotate');
+    elements.viewer.autoRotateDelay = 0;
+    elements.viewer.rotationPerSecond = '30deg';
     elements.viewer.toggleAttribute('auto-rotate', active);
+    elements.viewer.autoRotate = active;
     elements.autoRotate.setAttribute('aria-pressed', String(active));
     announce(active ? 'Auto-rotate enabled.' : 'Auto-rotate disabled.');
   }
 
   function resetCamera() {
     if (!elements.viewer) return;
-    elements.viewer.cameraOrbit = '0deg 75deg auto';
+    elements.viewer.removeAttribute('auto-rotate');
+    elements.viewer.autoRotate = false;
+    elements.autoRotate?.setAttribute('aria-pressed', 'false');
+    elements.viewer.resetTurntableRotation?.();
+    elements.viewer.cameraOrbit = 'auto auto auto';
     elements.viewer.cameraTarget = 'auto auto auto';
     elements.viewer.fieldOfView = 'auto';
     elements.viewer.jumpCameraToGoal?.();
-    announce('Camera view reset.');
+    announce('Rotation stopped and camera view reset.');
   }
 
   function nativeFullscreenElement() {

@@ -80,8 +80,11 @@ function createHarness({ requestFullscreen } = {}) {
   ];
   const elements = Object.fromEntries(selectors.map((selector) => [selector, new FakeElement()]));
   const viewer = elements['[data-model-viewer]'];
+  const calls = { jumpCameraToGoal: 0, resetTurntableRotation: 0 };
   viewer.pause = () => {};
   viewer.play = () => {};
+  viewer.jumpCameraToGoal = () => { calls.jumpCameraToGoal += 1; };
+  viewer.resetTurntableRotation = () => { calls.resetTurntableRotation += 1; };
 
   const documentListeners = new Map();
   const documentElement = new FakeElement();
@@ -106,7 +109,7 @@ function createHarness({ requestFullscreen } = {}) {
   runInNewContext(source, { document, window, URL, console });
   documentListeners.get('DOMContentLoaded')();
 
-  return { document, elements };
+  return { calls, document, elements };
 }
 
 test('fullscreen control uses an in-page fullscreen fallback on mobile browsers', async () => {
@@ -137,4 +140,35 @@ test('fullscreen control falls back when a mobile browser rejects its native API
   await elements['[data-fullscreen]'].click();
 
   assert.equal(elements['[data-viewer-shell]'].classList.contains('is-fallback-fullscreen'), true);
+});
+
+test('orbit control starts auto-rotation immediately', () => {
+  const { calls, elements } = createHarness();
+  const viewer = elements['[data-model-viewer]'];
+  const button = elements['[data-auto-rotate]'];
+
+  button.click();
+
+  assert.equal(viewer.hasAttribute('auto-rotate'), true);
+  assert.equal(viewer.autoRotateDelay, 0);
+  assert.equal(viewer.rotationPerSecond, '30deg');
+  assert.equal(calls.resetTurntableRotation, 0);
+  assert.equal(button.getAttribute('aria-pressed'), 'true');
+});
+
+test('reset control stops orbit and restores the camera and turntable', () => {
+  const { calls, elements } = createHarness();
+  const viewer = elements['[data-model-viewer]'];
+  const orbitButton = elements['[data-auto-rotate]'];
+
+  orbitButton.click();
+  elements['[data-reset-camera]'].click();
+
+  assert.equal(viewer.hasAttribute('auto-rotate'), false);
+  assert.equal(orbitButton.getAttribute('aria-pressed'), 'false');
+  assert.equal(viewer.cameraOrbit, 'auto auto auto');
+  assert.equal(viewer.cameraTarget, 'auto auto auto');
+  assert.equal(viewer.fieldOfView, 'auto');
+  assert.equal(calls.resetTurntableRotation, 1);
+  assert.equal(calls.jumpCameraToGoal, 1);
 });
