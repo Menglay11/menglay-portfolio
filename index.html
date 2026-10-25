@@ -3,14 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Kaing Menglay's interactive portfolio of 3D modelling, animation, Blender, and software development work.">
+    <meta name="description" content="Portfolio of Kaing Menglay featuring frontend development, responsive web projects, 3D modelling, and animation.">
     <meta name="theme-color" content="#e9e7df">
-    <title>Kaing Menglay — Interactive 3D Portfolio</title>
+    <title>Kaing Menglay | Frontend &amp; 3D Portfolio</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230d0e0e'/%3E%3Cpath d='M14 15v34h8V37l12 12h11L29 32l15-17H34L22 29V15z' fill='%23d8ff3e'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Syne:wght@500;600;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
     <script>
       (function () {
         try {
@@ -19,6 +18,7 @@
         } catch (error) { document.documentElement.dataset.theme = 'light'; }
       }());
     </script>
+    <link rel="stylesheet" href="css/style.css">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
     <script src="js/main.js" defer></script>
     <script src="js/model-viewer.js" defer></script>
@@ -37,7 +37,7 @@
 
     <header class="site-header" data-site-header>
       <a class="identity" href="#home" aria-label="Kaing Menglay, back to home"><span class="identity__mark" aria-hidden="true">KM</span><span class="identity__name">Kaing Menglay</span></a>
-      <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation" data-navigation><a class="nav-link is-active" href="#home" aria-current="page">Atelier</a><a class="nav-link" href="#work">3D Work</a><a class="nav-link" href="#practice">Practice</a><a class="nav-link" href="#about">About</a><a class="nav-link" href="#contact">Contact</a></nav>
+      <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation" data-navigation><a class="nav-link is-active" href="#home" aria-current="page">Home</a><a class="nav-link" href="#work">Work</a><a class="nav-link" href="#practice">Practice</a><a class="nav-link" href="#about">About</a><a class="nav-link" href="#contact">Contact</a></nav>
       <div class="header-actions">
         <button class="theme-toggle icon-button" type="button" aria-label="Switch to dark theme" aria-pressed="false" data-theme-toggle><svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"></circle><path d="M12 2v2.25M12 19.75V22M4.93 4.93l1.6 1.6M17.47 17.47l1.6 1.6M2 12h2.25M19.75 12H22M4.93 19.07l1.6-1.6M17.47 6.53l1.6-1.6"></path></svg><svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.4A8.2 8.2 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"></path></svg></button>
         <button class="nav-toggle icon-button" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation" data-nav-toggle><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"></path></svg></button>
@@ -51,17 +51,17 @@
 
         <div class="hero-layout">
           <div class="hero-intro" data-depth="0.35">
-            <h1 id="hero-title">I build ideas<br>you can orbit.</h1>
+            <h1 id="hero-title">I build digital experiences<br>for screen and space.</h1>
             <p class="hero-role">Computer Science student · Software Engineering</p>
-            <p>Exploring software, 3D modelling, and animation through hands-on practice.</p>
+            <p>Building responsive frontend experiences while exploring 3D modelling and animation through hands-on projects.</p>
             <div class="hero-actions">
-              <a class="primary-action" href="#work">Explore 3D work<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+              <a class="primary-action" href="#work">Explore my work<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
               <a class="secondary-action" href="#about">About me<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
             </div>
             <dl class="hero-details" aria-label="Current profile">
               <div><dt>Based at</dt><dd>CADT</dd></div>
               <div><dt>Studying</dt><dd>Year 3</dd></div>
-              <div><dt>Focus</dt><dd>3D + Web</dd></div>
+              <div><dt>Focus</dt><dd>Frontend + 3D</dd></div>
             </dl>
           </div>
 
@@ -73,17 +73,17 @@
           </figure>
         </div>
 
-        <a class="scroll-cue" href="#work"><span>Animation &amp; modelling below</span><i aria-hidden="true"></i></a>
+        <a class="scroll-cue" href="#work"><span>Frontend and 3D work below</span><i aria-hidden="true"></i></a>
       </section>
 
       <section class="work-section" id="work" aria-labelledby="work-section-title">
         <header class="work-intro reveal">
-          <h2 id="work-section-title">Animation &amp;<br>Modelling</h2>
-          <p>Explore the real models in the browser. Rotate and zoom each object, switch projects, and play the animation clips included in the GLB files.</p>
+          <h2 id="work-section-title">Selected Work</h2>
+          <p>Explore frontend projects built around real user needs, alongside interactive 3D models and animation you can control in the browser.</p>
         </header>
 
         <section class="exhibit" aria-labelledby="work-title">
-          <header class="exhibit-header"><div class="exhibit-live"><i aria-hidden="true"></i> Live 3D object</div><div class="exhibit-heading"><p data-project-category>Interactive 3D work</p><h2 id="work-title" data-project-title>Preparing exhibit</h2></div><p class="exhibit-index"><span data-project-position>—</span><i></i><span data-project-total>05</span></p></header>
+          <header class="exhibit-header"><div class="exhibit-live"><i aria-hidden="true"></i> Live 3D object</div><div class="exhibit-heading"><p data-project-category>3D Modelling &amp; Animation</p><h2 id="work-title" data-project-title>Preparing exhibit</h2></div><p class="exhibit-index"><span data-project-position>00</span><i></i><span data-project-total>05</span></p></header>
           <div class="exhibit-stage">
           <div class="viewer-shell" data-viewer-shell>
             <div class="viewer-coordinate viewer-coordinate--top" aria-hidden="true">Y +01.280</div><div class="viewer-coordinate viewer-coordinate--side" aria-hidden="true">X −00.450</div>
@@ -95,7 +95,7 @@
           </div>
 
           <aside class="project-deck" aria-label="Project browser">
-            <div class="project-deck__heading"><h3>Browse objects</h3><p><span aria-hidden="true">05</span><span class="sr-only">Five</span> projects</p></div>
+            <div class="project-deck__heading"><h3>Browse 3D projects</h3><p><span aria-hidden="true">05</span><span class="sr-only">Five</span> projects</p></div>
             <div class="project-navigation" aria-label="Project selection" data-project-groups></div>
             <div class="project-inspector"><section class="animation-panel" aria-labelledby="animation-title" data-animation-panel><div class="animation-panel__heading"><h3 id="animation-title">Motion controls</h3><label class="speed-control" data-speed-control hidden><span>Speed</span><select data-playback-speed aria-label="Animation playback speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label></div><p class="animation-empty" data-animation-empty>Animation clips will appear after the model loads.</p><div class="playback-controls" data-playback-controls hidden><button type="button" data-animation-play>Play</button><button type="button" data-animation-pause>Pause</button><button type="button" data-animation-restart>Restart</button></div></section></div>
           </aside>
@@ -103,21 +103,115 @@
           <p class="sr-only" aria-live="polite" aria-atomic="true" data-accessible-status></p>
           <noscript><div class="noscript-message"><strong>JavaScript is needed for the interactive viewer.</strong><p>Enable JavaScript to inspect the five 3D projects.</p></div></noscript>
         </section>
+
+        <section class="frontend-work" id="frontend-work" aria-labelledby="frontend-work-title">
+          <header class="frontend-work__heading reveal">
+            <h2 id="frontend-work-title">Frontend Development</h2>
+            <p>Selected collaborative projects where I built responsive interfaces and core user-facing features.</p>
+          </header>
+
+          <div class="web-projects">
+            <article class="web-project" aria-labelledby="jongkran-title">
+              <div class="web-project__gallery reveal">
+                <img class="web-project__logo" src="assets/jongkran-logo.png" alt="JongKran logo" width="798" height="487">
+              </div>
+
+              <div class="web-project__content reveal">
+                <div class="web-project__identity">
+                  <h3 id="jongkran-title">JongKran</h3>
+                  <p class="web-project__status"><i aria-hidden="true"></i> No longer maintained</p>
+                </div>
+                <div class="web-project__scope" aria-label="My role">
+                  <strong>My role · Frontend development</strong>
+                </div>
+                <p class="web-project__summary">A smart cooking platform that helps users discover recipes based on available ingredients.</p>
+
+                <section class="web-project__contributions" aria-labelledby="jongkran-contributions-title">
+                  <h4 id="jongkran-contributions-title">Features I built</h4>
+                  <ul>
+                    <li>Matched recipes</li>
+                    <li>Favorites</li>
+                    <li>History</li>
+                    <li>Recipe suggestions</li>
+                    <li>Login</li>
+                    <li>Admin CRUD interface</li>
+                  </ul>
+                </section>
+
+                <section class="web-project__technologies" aria-labelledby="jongkran-technologies-title">
+                  <h4 id="jongkran-technologies-title">Technologies I used</h4>
+                  <ul class="web-project__stack">
+                    <li>React</li>
+                    <li>JavaScript</li>
+                    <li>Tailwind CSS</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                  </ul>
+                </section>
+
+                <a class="web-project__link" href="https://github.com/sochan707/JongKran-project" target="_blank" rel="noopener noreferrer" aria-label="View JongKran repository">
+                  <span>View repository</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"></path></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="web-project" aria-labelledby="lifegood-title">
+              <div class="web-project__gallery reveal">
+                <img class="web-project__logo web-project__logo--lifegood" src="assets/lifegood-logo.png" alt="LifeGoods logo" width="2048" height="2048">
+              </div>
+
+              <div class="web-project__content reveal">
+                <div class="web-project__identity">
+                  <h3 id="lifegood-title">LifeGoods</h3>
+                </div>
+                <div class="web-project__scope" aria-label="My role">
+                  <strong>My role · Frontend development</strong>
+                </div>
+                <p class="web-project__summary">LifeGoods helps shoppers scan barcodes and view clear, reliable product information.</p>
+
+                <section class="web-project__contributions" aria-labelledby="lifegood-contributions-title">
+                  <h4 id="lifegood-contributions-title">Features I built</h4>
+                  <ul>
+                    <li>Barcode scanning</li>
+                    <li>Search by barcode, product name, or brand</li>
+                    <li>Product results page</li>
+                  </ul>
+                </section>
+
+                <section class="web-project__technologies" aria-labelledby="lifegood-technologies-title">
+                  <h4 id="lifegood-technologies-title">Technologies I used</h4>
+                  <ul class="web-project__stack">
+                    <li>React</li>
+                    <li>Tailwind CSS</li>
+                    <li>TypeScript</li>
+                    <li>ZXing Browser</li>
+                  </ul>
+                </section>
+
+                <a class="web-project__link" href="https://github.com/internetOnion/life-goods.git" target="_blank" rel="noopener noreferrer" aria-label="View LifeGoods repository">
+                  <span>View repository</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"></path></svg>
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
       </section>
 
       <section class="practice-section" id="practice" aria-labelledby="practice-title">
-        <header class="practice-heading reveal"><h2 id="practice-title">Between the mesh<br>and the machine.</h2><span>I’m learning to make digital objects feel clear, responsive, and alive—from Blender’s viewport to the browser.</span></header>
-        <div class="practice-orbit" aria-label="Skills in practice"><div class="practice-core reveal"><span>Current<br>practice</span></div><ul><li class="reveal"><strong>3D Modelling</strong><small>Form, proportion, and interactive GLB objects</small></li><li class="reveal"><strong>Animation</strong><small>Motion clips, playback, and character studies</small></li><li class="reveal"><strong>Blender</strong><small>The workshop behind this collection</small></li><li class="reveal"><strong>Software</strong><small>Responsive systems built for the web</small></li><li class="reveal"><strong>Problem solving</strong><small>Making every state understandable and recoverable</small></li></ul></div>
+        <header class="practice-heading reveal"><h2 id="practice-title">Between code and motion.</h2><span>I work across frontend development, 3D modelling, and animation, turning ideas into clear, interactive digital experiences.</span></header>
+        <div class="practice-orbit" aria-label="Skills in practice"><div class="practice-core reveal"><span>Current<br>practice</span></div><ul><li class="reveal"><strong>Frontend Development</strong><small>Responsive, usable interfaces for the web</small></li><li class="reveal"><strong>React &amp; TypeScript</strong><small>Components, application logic, and user-facing features</small></li><li class="reveal"><strong>3D Modelling</strong><small>Form, proportion, and interactive assets created with Blender</small></li><li class="reveal"><strong>Animation</strong><small>Motion clips, playback, and character studies</small></li><li class="reveal"><strong>Problem solving</strong><small>Making every state understandable and recoverable</small></li></ul></div>
       </section>
 
       <section class="about-section" id="about" aria-labelledby="about-title">
         <div class="about-portrait reveal"><span class="about-portrait__ring" aria-hidden="true"></span><img src="assets/kaing-menglay-portrait.png" alt="Kaing Menglay" width="1024" height="1536"><p>Learning by making</p></div>
-        <div class="about-copy reveal"><h2 id="about-title">Curious by default.<br>Technical by practice.</h2><p>I’m a third-year Computer Science student specializing in Software Engineering at CADT. I’m interested in technology, software development, 3D modelling, animation, and learning new skills. I enjoy collaborating with friends, solving problems, and strengthening my knowledge through hands-on practice.</p><dl class="study-details"><div><dt>University</dt><dd>CADT</dd></div><div><dt>Year</dt><dd>Third year</dd></div><div><dt>Major</dt><dd>Computer Science</dd></div><div><dt>Focus</dt><dd>Software Engineering</dd></div></dl></div>
+        <div class="about-copy reveal"><h2 id="about-title">Curious by default.<br>Technical by practice.</h2><p>I’m a third-year Computer Science student specializing in Software Engineering at CADT. I build frontend interfaces and explore 3D modelling and animation with Blender. I enjoy collaborating with others, solving problems, and developing my skills through hands-on projects.</p><dl class="study-details"><div><dt>University</dt><dd>CADT</dd></div><div><dt>Year</dt><dd>Third year</dd></div><div><dt>Major</dt><dd>Computer Science</dd></div><div><dt>Focus</dt><dd>Software Engineering</dd></div></dl></div>
       </section>
 
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
         <div class="contact-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
-        <h2 id="contact-title">Let’s create something<br><em>worth orbiting.</em></h2>
+        <h2 id="contact-title">Let’s create something<br><em>useful and memorable.</em></h2>
         <a class="contact-link" href="mailto:kaingmenglay@gmail.com">
           <span>kaingmenglay@gmail.com</span>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"></path></svg>
@@ -130,6 +224,6 @@
       </section>
     </main>
 
-    <footer class="site-footer"><p>© <span data-current-year></span> Kaing Menglay</p><p>Designed around real 3D work</p><a href="#home">Back to top <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"></path></svg></a></footer>
+    <footer class="site-footer"><p>© <span data-current-year></span> Kaing Menglay</p><p>Frontend development · 3D modelling · Animation</p><a href="#home">Back to top <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"></path></svg></a></footer>
   </body>
 </html>

@@ -12,11 +12,11 @@ Static HTML5, CSS3, and vanilla JavaScript using Google's `<model-viewer>` web c
 
 ## Users
 
-Portfolio visitors evaluating Kaing Menglay's 3D modelling, animation, Blender, software-development, problem-solving, and interactive-web work.
+Portfolio visitors evaluating Kaing Menglay's frontend development, 3D modelling, animation, Blender, software-development, problem-solving, and interactive-web work.
 
 ## Product Purpose
 
-A personal digital exhibition that puts Kaing Menglay's real GLB work at the center, explains his confirmed education and interests, and provides a direct email contact path.
+A personal digital exhibition that puts Kaing Menglay's real GLB work at the center, presents accurately attributed frontend contributions to collaborative projects, explains his confirmed education and interests, and provides a direct email contact path.
 
 ## Positioning
 
@@ -34,6 +34,7 @@ Visitors explore five supplied GLB files on desktop or mobile, rotate and zoom e
 - Keep project content in an editable JavaScript data array.
 - Preserve all supplied GLB files unchanged.
 - Do not present model-download controls.
+- Present collaborative web projects with specific contribution boundaries, team attribution, maintenance status, and provided repository links.
 - Do not fabricate achievements, project details, social URLs, qualifications, statistics, techniques, timelines, or inspirations.
 
 ## Brand Commitments
@@ -48,12 +49,14 @@ Visitors explore five supplied GLB files on desktop or mobile, rotate and zoom e
 
 - Five supplied GLB files: `Animation.glb`, `Blender_First.glb`, `Car.glb`, `Cup.glb`, and `firstCharacterWithAnimation.glb`.
 - Supplied portrait photograph.
+- JongKran home and admin screenshots, its logo, a provided repository URL, confirmed feature contributions, technology list, team roles, and maintenance status.
+- LifeGood logo, repository URL, product description, confirmed frontend features, and technology list.
 - Confirmed personal information and introduction from the project brief.
 - No confirmed GitHub or LinkedIn URLs; both must remain clearly marked placeholders.
 
 ## Product Principles
 
-- Lead with the work: make the interactive model the immediate proof.
+- Lead with the work: make the interactive model the immediate proof, then show frontend work through real product screens.
 - Keep claims strictly grounded in supplied information.
 - Make every model state understandable and recoverable.
 - Support keyboard, touch, mouse, reduced motion, and 200% zoom.

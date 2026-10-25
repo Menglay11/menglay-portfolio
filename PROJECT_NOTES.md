@@ -1,6 +1,8 @@
-# Kaing Menglay — 3D Modelling & Animation Portfolio
+# Kaing Menglay: 3D Modelling & Animation Portfolio
 
 A static, GitHub Pages-compatible portfolio focused on Kaing Menglay’s real 3D modelling and animation work. The site uses semantic HTML, responsive CSS, vanilla JavaScript, and Google’s `<model-viewer>` web component. It loads one GLB at a time and detects animation clips from the active file at runtime.
+
+The portfolio also includes a frontend case study for JongKran, a collaborative full-stack cooking project. The section uses supplied product screenshots and clearly separates Kaing Menglay’s frontend contributions from the work of the other team members.
 
 ## Project structure
 
@@ -8,6 +10,10 @@ A static, GitHub Pages-compatible portfolio focused on Kaing Menglay’s real 3D
 portfolio/
 ├── index.html
 ├── assets/
+│   ├── jongkran-admin.png
+│   ├── jongkran-home.png
+│   ├── jongkran-logo.png
+│   ├── lifegood-logo.png
 │   └── kaing-menglay-portrait.png
 ├── css/
 │   └── style.css
@@ -84,6 +90,10 @@ The included descriptions are intentionally marked as placeholders because no pr
 ```
 
 Use either an existing category or a new category name. The project navigation is generated automatically from the array order and category values.
+
+## Editing the frontend case studies
+
+JongKran and LifeGood case-study content lives in the `frontend-work` section of `index.html`. Their layout and responsive rules use the `frontend-work`, `web-projects`, and `web-project` classes in `css/style.css`. Keep contribution wording specific, retain confirmed status details, and replace project imagery only with assets you have permission to display.
 
 ## Run locally
 
