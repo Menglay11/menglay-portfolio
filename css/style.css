@@ -90,7 +90,7 @@ html[data-theme="dark"] .theme-icon--moon { opacity: 1; transform: none; }
 
 .hero-layout { position: relative; z-index: 3; display: grid; grid-template-columns: minmax(0, .88fr) minmax(24rem, 1.12fr); align-items: center; gap: clamp(2rem, 6vw, 6rem); width: min(100%, 90rem); margin: auto; }
 .hero-intro { position: relative; z-index: 2; max-width: 34rem; transform: translate(calc(var(--mx) * -10px), calc(var(--my) * -10px)); transition: transform 140ms linear; }
-.hero-intro h1 { max-width: 11ch; margin: 0 0 1rem; font-family: var(--display); font-size: clamp(2.8rem, 4.7vw, 4.4rem); font-weight: 600; letter-spacing: -.04em; line-height: .92; text-wrap: balance; }
+.hero-intro h1 { max-width: 11ch; margin: 0 0 1rem; font-family: var(--display); font-size: clamp(2.6rem, 3.65vw, 3.6rem); font-weight: 600; letter-spacing: -.04em; line-height: .92; text-wrap: balance; }
 .hero-role { margin: 0 0 .7rem; color: var(--ink); font-size: clamp(.86rem, 1vw, .98rem); font-weight: 700; }
 .hero-intro > p:not(.hero-role) { max-width: 48ch; margin: 0 0 1.5rem; color: var(--ink-soft); font-size: clamp(.9rem, 1vw, 1rem); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
@@ -308,7 +308,7 @@ html.has-viewer-fullscreen, html.has-viewer-fullscreen body { overflow: hidden; 
 
 @media (max-width: 1180px) {
   .hero-layout { grid-template-columns: minmax(0, .9fr) minmax(22rem, 1fr); gap: clamp(2rem, 5vw, 5rem); }
-  .hero-intro h1 { font-size: clamp(2.75rem, 5.2vw, 4.1rem); }
+  .hero-intro h1 { font-size: clamp(2.55rem, 4.6vw, 3.45rem); }
   .hero-portrait__image { width: min(33vw, 23rem); }
   .hero-portrait__note { right: 0; }
   .exhibit-stage { grid-template-columns: minmax(0, 1fr) 18rem; height: min(64vh, 38rem); }
@@ -332,7 +332,7 @@ html.has-viewer-fullscreen, html.has-viewer-fullscreen body { overflow: hidden; 
   .hero-type span:last-child { margin-left: 17vw; }
   .hero-layout { grid-template-columns: 1fr; gap: 3.5rem; }
   .hero-intro { width: min(100%, 36rem); transform: none; }
-  .hero-intro h1 { font-size: clamp(2.65rem, 6.5vw, 3.6rem); }
+  .hero-intro h1 { font-size: clamp(2.45rem, 5.7vw, 3.25rem); }
   .hero-intro > p:not(.hero-role) { max-width: 40ch; }
   .hero-portrait { width: min(100%, 34rem); transform: none; }
   .hero-portrait__orbits { width: min(92vw, 38rem); }
@@ -374,7 +374,7 @@ html.has-viewer-fullscreen, html.has-viewer-fullscreen body { overflow: hidden; 
   .atelier { padding: calc(var(--header-h) + 2.5rem) .75rem 4rem; }
   .hero-intro { margin-left: .25rem; }
   .hero-layout, .hero-intro, .hero-portrait { min-width: 0; max-width: 100%; }
-  .hero-intro h1 { max-width: 100%; font-size: clamp(2.25rem, 7.4vw, 2.7rem); }
+  .hero-intro h1 { max-width: 100%; font-size: clamp(2.2rem, 7vw, 2.5rem); }
   .hero-role { max-width: 30ch; }
   .hero-actions { display: grid; grid-template-columns: 1fr; width: min(100%, 22rem); }
   .primary-action, .secondary-action { width: 100%; }
@@ -395,6 +395,8 @@ html.has-viewer-fullscreen, html.has-viewer-fullscreen body { overflow: hidden; 
   .web-project__logo { max-height: 7rem; }
   .web-project__content { min-height: 0; padding: 1.2rem 1rem; }
   .web-project__content h3 { font-size: clamp(2rem, 11vw, 2.45rem); }
+  .web-project__identity { display: grid; justify-content: start; gap: .35rem; }
+  .web-project__status { margin-top: 0; text-align: left; }
   .exhibit-header { min-height: 4rem; }
   .viewer-shell { height: 64vh; min-height: 29rem; }
   .viewer-toolbar { top: auto; right: 50%; bottom: 2.65rem; display: flex; transform: translateX(50%); }
