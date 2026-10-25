@@ -238,11 +238,11 @@ html.has-viewer-fullscreen, html.has-viewer-fullscreen body { overflow: hidden; 
 .web-project__link svg { width: 1.15rem; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7; }
 .web-project__link:hover { gap: 3rem; background: var(--signal); color: var(--signal-ink); }
 
-.practice-section { position: relative; padding: clamp(6rem, 11vw, 10rem) var(--page); background: var(--stage); color: var(--stage-ink); overflow: hidden; }
+.practice-section { position: relative; padding: clamp(4rem, 6vw, 6rem) var(--page); background: var(--stage); color: var(--stage-ink); overflow: hidden; }
 .practice-heading { display: grid; grid-template-columns: 1.55fr .75fr; align-items: end; gap: clamp(1.25rem, 3vw, 3.5rem); padding-bottom: var(--heading-rule-gap); border-bottom: 1px solid var(--stage-line); }
 .practice-heading h2 { margin: 0; font-family: var(--display); font-size: clamp(2.8rem, 5.4vw, 5.25rem); font-weight: 600; letter-spacing: -.04em; line-height: .9; }
 .practice-heading > span { max-width: 31ch; color: var(--stage-soft); font-size: .9rem; }
-.practice-orbit { position: relative; display: grid; grid-template-columns: minmax(17rem, .8fr) 1.5fr; gap: clamp(3rem, 8vw, 9rem); align-items: center; padding-top: clamp(4rem, 8vw, 8rem); }
+.practice-orbit { position: relative; display: grid; grid-template-columns: minmax(17rem, .8fr) 1.5fr; gap: clamp(3rem, 8vw, 9rem); align-items: center; padding-top: clamp(2.5rem, 4vw, 4.5rem); }
 .practice-core { position: relative; display: grid; place-items: center; width: min(29vw, 24rem); aspect-ratio: 1; border: 1px solid var(--stage-line); border-radius: 50%; }
 .practice-core::before, .practice-core::after { position: absolute; border: 1px solid color-mix(in srgb, var(--signal) 42%, transparent); border-radius: 50%; content: ""; animation: orbit 18s linear infinite; }
 .practice-core::before { inset: 12%; }
